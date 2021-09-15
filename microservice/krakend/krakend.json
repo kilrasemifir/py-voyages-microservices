@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "endpoints": [
+        {
+            "endpoint": "/api/cinema",
+            "backend":{
+                "host":[
+                    "http://cinema:80"
+                ]
+            }
+        }
+    ],
+    "extra_config": {
+    }
+}

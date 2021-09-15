@@ -1,0 +1,17 @@
+version: "3.7"
+
+services: 
+  mongo:
+    image: mongo
+    ports:
+    - 27017:27017
+  
+  voyages:
+    build: ./voyage
+    environment: 
+      MONGO_HOST: mongo
+    ports:
+    - 8080:8080
+    depends_on: 
+    - mongo
+    
