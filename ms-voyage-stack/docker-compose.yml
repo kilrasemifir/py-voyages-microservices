@@ -14,4 +14,14 @@ services:
     - 8080:8080
     depends_on: 
     - mongo
-    
+    volumes: 
+    - ./voyage/src:/app/src/
+
+  tickets:
+    build: ./ticket
+    environment: 
+      VOYAGE_HOST: voyages
+    depends_on:
+    - voyages
+    ports:
+    - 8081:8080
